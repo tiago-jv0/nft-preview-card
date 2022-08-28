@@ -1,0 +1,142 @@
+.card {
+    max-width: 32.7rem;
+    background-color: var(--very-dark-blue-card-bg);
+    box-shadow: 0px 2.5rem 5rem rgba(0, 0, 0, 0.0952917);
+    border-radius: 1.5rem;
+    padding: 2.4rem;
+
+    @media screen and (min-width: 768px) {
+        max-width: 35rem;
+        padding: 2.4rem 2.4rem 3.2rem 2.4rem;
+    }
+
+    &__image {
+        border-radius: 8px;
+        height: 27.9rem;
+        inset: 0;
+        background-image: url(../../images/image-equilibrium.jpg);
+        background-size: cover;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            height: 30.2rem;
+        }
+
+        &:hover {
+            background-image: linear-gradient(to right, rgba(0, 255, 247,0.5), rgba(0, 255, 247,0.5)),
+                url(../../images/image-equilibrium.jpg);
+            mix-blend-mode: normal;
+
+            img {
+                display: block;
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin-top: 2.4rem;
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        color: var(--white);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--cyan);
+        }
+    }
+
+    &__description {
+        margin-top: 1.2rem;
+
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+
+        color: var(--soft-blue);
+
+        @media screen and (min-width: 768px) {
+            margin-top: 1.6rem;
+        }
+    }
+
+    &__additional-information {
+        margin-top: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+        padding-bottom: 1.6rem;
+        border-bottom: 1px solid var(--very-dark-blue-line);
+
+        @media screen and (min-width: 768px) {
+            margin-top: 2.4rem;
+
+            font-size: 1.6rem;
+            line-height: 2rem;
+
+            padding-bottom: 2.4rem;
+        }
+    }
+
+    &__price {
+        font-weight: 600;
+
+        color: var(--cyan);
+
+        display: flex;
+        align-items: center;
+        gap: 0.648rem;
+    }
+
+    &__expiration-time {
+        display: flex;
+        align-items: center;
+        gap: 0.77rem;
+
+        font-weight: 400;
+
+        color: #8bacd9;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-top: 1.6rem;
+    }
+
+    &__author {
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+        font-weight: 400;
+        color: #8bacd9;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+
+        span {
+            color: var(--white);
+            cursor: pointer;
+            &:hover {
+                color: var(--cyan);
+            }
+        }
+    }
+
+    &__avatar {
+        border: 1px solid var(--white);
+        width: 3.3rem;
+        height: 3.3rem;
+        border-radius: 50%;
+    }
+}
